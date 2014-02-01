@@ -9,8 +9,9 @@
     [2014-02-01 18:09:57 - app3] Starting activity com.example.app3.MainActivity on device emulator-5554
     [2014-02-01 18:09:58 - app3] ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.app3/.MainActivity }
 5. Import an application project.
-    ok, 42
+    ok, 42; note: "copy project to workspace"
 6. Debug an Android application.
+    private static final String TAG = "WikiNotes";
     LogCat - log.i/d/e/v
     ok: 02-01 11:41:34.305: I/TheAnswer(1078): Again - Printing answer to life
 7. Further explore the IDE
@@ -37,3 +38,13 @@
     label texts -
         res/values/string.xml
         res/values-ru/string.xml
+
+    HOW TO EDIT UI:
+    DDMS Perspective/ "dump view hierarchy to UI automator"
+
+    how to find out field usage - Open Call Hierarchy
+
+    select process/ update heap/ heap tab/ Cauce GC btn
+
+    method profiling
+    calc test didn't started
