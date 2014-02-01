@@ -14,3 +14,4 @@
     LogCat - log.i/d/e/v
     ok: 02-01 11:41:34.305: I/TheAnswer(1078): Again - Printing answer to life
 7. Further explore the IDE
+    screenshot - ok
