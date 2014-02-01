@@ -15,3 +15,25 @@
     ok: 02-01 11:41:34.305: I/TheAnswer(1078): Again - Printing answer to life
 7. Further explore the IDE
     screenshot - ok
+    telnet
+        telnet localhost 5554
+
+        sms send <sender’s phone nmber> <message>
+
+        network speed edge
+        KO: invalid <speed> argument, see 'help network speed' for valid values
+          gsm      GSM/CSD
+          hscsd    HSCSD
+          gprs     GPRS
+          edge     EDGE/EGPRS
+          umts     UMTS/3G
+          hsdpa    HSDPA
+          full     no limit
+          <num>    selects both upload and download speed
+          <up>:<down> select individual upload/download speeds
+
+        doesn't seem very much difference on emulator...
+
+    label texts -
+        res/values/string.xml
+        res/values-ru/string.xml
