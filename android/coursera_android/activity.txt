@@ -1,0 +1,16 @@
+todo:
+    for each step - List the Activity lifecycle methods that have been invoked
+    on ActivityOne and on ActivityTwo, in the order they occurred.
+
+b) Suppose the user starts the application, which brings up ActivityOne. Next, suppose the user
+presses the Button to start ActivityTwo, and that ActivityTwo then appears on the screen.
+
+c) Next, suppose the user navigates back to ActivityOne by pressing the “Close Activity”
+Button of ActivityTwo. ActivityTwo closes and then ActivityOne reappears. Starting where
+you left off after the previous step:
+
+d) Next, the user presses the Button to start ActivityTwo again. Once ActivityTwo appears, the
+user presses the Home Key on the device. Starting where you left off after the previous step:
+
+e) Next, the user starts the application again, by clicking on its icon in the Launcher. Once the
+application has restarted, and starting where you left off after the previous step:
