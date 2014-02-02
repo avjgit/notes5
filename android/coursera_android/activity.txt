@@ -61,11 +61,11 @@ ActivityTwo.
             each <textview> element, you will see its id. The TextView variables should be
             accessible in all methods, but they should be initially assigned within onCreate().
 
-    c. Override all the lifecycle callback methods. In each of these methods place a call to
-    the Log.i() method, to output a string with the following format: “Entered the XXX
-    method”, where XXX is replaced with the name of the method being invoked. For
-    example, “Entered the onCreate() method". Update the appropriate invocation
-    counter and call the displayCounts() method to update the user interface.
+    done    c. Override all the lifecycle callback methods. In each of these methods place a call to
+            the Log.i() method, to output a string with the following format: “Entered the XXX
+            method”, where XXX is replaced with the name of the method being invoked. For
+            example, “Entered the onCreate() method". Update the appropriate invocation
+            counter and call the displayCounts() method to update the user interface.
 
     d. Implement the OnClickListener for the launchActivityTwoButton. (for
     ActivityOne.java only)
