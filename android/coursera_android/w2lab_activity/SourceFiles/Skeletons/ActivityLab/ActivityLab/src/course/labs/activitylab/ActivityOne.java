@@ -82,11 +82,11 @@ public class ActivityOne extends Activity {
 		// TODO: Emit LogCat message
 
 
-		// TODO:
+		// TODO_done:
 		// Update the appropriate count variable
 		// Update the user interface via the displayCounts() method
-
-
+		mCreate++;
+		displayCounts();
 
 	}
 
@@ -99,11 +99,11 @@ public class ActivityOne extends Activity {
 		// TODO: Emit LogCat message
 
 
-		// TODO:
+		// TODO_done:
 		// Update the appropriate count variable
 		// Update the user interface
-
-
+		mStart++;
+		displayCounts();
 	}
 
 	@Override
@@ -116,6 +116,8 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
+		mResume++;
+		displayCounts();
 
 
 	}
@@ -143,9 +145,11 @@ public class ActivityOne extends Activity {
 		// TODO: Emit LogCat message
 
 
-		// TODO:
+		// TODO_done:
 		// Update the appropriate count variable
 		// Update the user interface
+		mRestart++;
+		displayCounts();
 
 
 
