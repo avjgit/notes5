@@ -51,9 +51,9 @@ application has restarted, and starting where you left off after the previous st
 a) Implement steps a through c described below for both ActivityOne (in ActivityOne.java),
 and for ActivityTwo (in ActivityTwo.java). Implement step d for ActivityOne and step e for
 ActivityTwo.
-    a. Create four counter variables, each one corresponding to a different one of the
-    lifecycle callback methods being monitored - onCreate(), onRestart(), onStart() and
-    onResume().
+    done    a. Create four counter variables, each one corresponding to a different one of the
+            lifecycle callback methods being monitored - onCreate(), onRestart(), onStart() and
+            onResume().
     Increment these variables when their corresponding lifecycle methods
     get called.
 
@@ -77,6 +77,8 @@ ActivityTwo.
     …
     }
     }
+
+    repeate a-d for a2
 
     e. Implement the OnClickListener for the closeButton. (for ActivityTwo.java only)
     closeButton.setOnClickListener(new OnClickListener() {

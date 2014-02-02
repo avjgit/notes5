@@ -24,6 +24,7 @@ public class ActivityOne extends Activity {
 	// TODO:
 	// Create counter variables for onCreate(), onRestart(), onStart() and
 	// onResume(), called mCreate, etc.
+	int mCreate, mRestart, mStart, mResume;
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called
 
