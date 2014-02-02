@@ -51,34 +51,34 @@ application has restarted, and starting where you left off after the previous st
 a) Implement steps a through c described below for both ActivityOne (in ActivityOne.java),
 and for ActivityTwo (in ActivityTwo.java). Implement step d for ActivityOne and step e for
 ActivityTwo.
-a. Create four counter variables, each one corresponding to a different one of the
-lifecycle callback methods being monitored - onCreate(), onRestart(), onStart() and
-onResume(). Increment these variables when their corresponding lifecycle methods
-get called.
-b. Create four TextView variables, each of which will display the value of a different
-counter variable. If you open layout.xml file in the res/layout directory and examine
-each <textview> element, you will see its id. The TextView variables should be
-accessible in all methods, but they should be initially assigned within onCreate().
-c. Override all the lifecycle callback methods. In each of these methods place a call to
-the Log.i() method, to output a string with the following format: “Entered the XXX
-method”, where XXX is replaced with the name of the method being invoked. For
-example, “Entered the onCreate() method". Update the appropriate invocation
-counter and call the displayCounts() method to update the user interface.
-6
-d. Implement the OnClickListener for the launchActivityTwoButton. (for
-ActivityOne.java only)
-launchActivityTwoButton.setOnClickListener(new OnClickListener() {
-public void onClick(View v) {
-// This function launches ActivityTwo
-// Hint: use Context’s startActivity() method
-…
-}
-}
-e. Implement the OnClickListener for the closeButton. (for ActivityTwo.java only)
-closeButton.setOnClickListener(new OnClickListener() {
-public void onClick(View v) {
-// This function closes ActivityTwo
-// Hint: use Context’s finish() method
-…
-}
-}
+    a. Create four counter variables, each one corresponding to a different one of the
+    lifecycle callback methods being monitored - onCreate(), onRestart(), onStart() and
+    onResume(). Increment these variables when their corresponding lifecycle methods
+    get called.
+    b. Create four TextView variables, each of which will display the value of a different
+    counter variable. If you open layout.xml file in the res/layout directory and examine
+    each <textview> element, you will see its id. The TextView variables should be
+    accessible in all methods, but they should be initially assigned within onCreate().
+    c. Override all the lifecycle callback methods. In each of these methods place a call to
+    the Log.i() method, to output a string with the following format: “Entered the XXX
+    method”, where XXX is replaced with the name of the method being invoked. For
+    example, “Entered the onCreate() method". Update the appropriate invocation
+    counter and call the displayCounts() method to update the user interface.
+
+    d. Implement the OnClickListener for the launchActivityTwoButton. (for
+    ActivityOne.java only)
+    launchActivityTwoButton.setOnClickListener(new OnClickListener() {
+    public void onClick(View v) {
+    // This function launches ActivityTwo
+    // Hint: use Context’s startActivity() method
+    …
+    }
+    }
+    e. Implement the OnClickListener for the closeButton. (for ActivityTwo.java only)
+    closeButton.setOnClickListener(new OnClickListener() {
+    public void onClick(View v) {
+    // This function closes ActivityTwo
+    // Hint: use Context’s finish() method
+    …
+    }
+    }
