@@ -21,7 +21,7 @@ public class ActivityOne extends Activity {
 	
 	// Lifecycle counters
 
-	// TODO:
+	// TODO_done:
 	// Create counter variables for onCreate(), onRestart(), onStart() and
 	// onResume(), called mCreate, etc.
 	int mCreate, mRestart, mStart, mResume;
@@ -30,17 +30,22 @@ public class ActivityOne extends Activity {
 
 
 
-	// TODO: Create variables for each of the TextViews, called
+	// TODO_done: Create variables for each of the TextViews, called
         // mTvCreate, etc. 
+	TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_one);
 		
-		// TODO: Assign the appropriate TextViews to the TextView variables
+		// TODO_done: Assign the appropriate TextViews to the TextView variables
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
+		mTvCreate = (TextView) findViewById(R.id.create);
+		mTvRestart = (TextView) findViewById(R.id.restart);
+		mTvStart = (TextView) findViewById(R.id.start);
+		mTvResume = (TextView) findViewById(R.id.resume);
 
 
 
