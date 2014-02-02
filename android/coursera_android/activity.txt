@@ -69,13 +69,6 @@ ActivityTwo.
 
     done    d. Implement the OnClickListener for the launchActivityTwoButton. (for ActivityOne.java only)
 
-    repeate a-d for a2
+    done    repeate a-d for a2
 
-    e. Implement the OnClickListener for the closeButton. (for ActivityTwo.java only)
-    closeButton.setOnClickListener(new OnClickListener() {
-    public void onClick(View v) {
-    // This function closes ActivityTwo
-    // Hint: use Context’s finish() method
-    …
-    }
-    }
+    done    e. Implement the OnClickListener for the closeButton. (for ActivityTwo.java only)
