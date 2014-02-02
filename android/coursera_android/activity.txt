@@ -5,12 +5,45 @@ todo:
 b) Suppose the user starts the application, which brings up ActivityOne. Next, suppose the user
 presses the Button to start ActivityTwo, and that ActivityTwo then appears on the screen.
 
+    a1 onCreate()
+    a1 onStart()
+    a1 onResume()
+
+    a1 onPause()
+    a1 onStop()
+
+    a2 onCreate()
+    a2 onStart()
+    a2 onResume()
+
 c) Next, suppose the user navigates back to ActivityOne by pressing the “Close Activity”
 Button of ActivityTwo. ActivityTwo closes and then ActivityOne reappears. Starting where
 you left off after the previous step:
 
+    a2 onPause()
+    a2 onStop()
+
+    a1 onRestart()
+    a1 onStart()
+    a1 onResume()
+
 d) Next, the user presses the Button to start ActivityTwo again. Once ActivityTwo appears, the
 user presses the Home Key on the device. Starting where you left off after the previous step:
 
+    a1 onPause()
+    a1 onStop()
+
+    a2 onRestart()
+    a2 onStart()
+    a2 onResume()
+
+    a2 onPause()
+    a2 onStop()
+
+
 e) Next, the user starts the application again, by clicking on its icon in the Launcher. Once the
 application has restarted, and starting where you left off after the previous step:
+
+    a2 onRestart()
+    a2 onStart()
+    a2 onResume()
