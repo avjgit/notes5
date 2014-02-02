@@ -67,15 +67,7 @@ ActivityTwo.
             example, “Entered the onCreate() method". Update the appropriate invocation
             counter and call the displayCounts() method to update the user interface.
 
-    d. Implement the OnClickListener for the launchActivityTwoButton. (for
-    ActivityOne.java only)
-    launchActivityTwoButton.setOnClickListener(new OnClickListener() {
-    public void onClick(View v) {
-    // This function launches ActivityTwo
-    // Hint: use Context’s startActivity() method
-    …
-    }
-    }
+    done    d. Implement the OnClickListener for the launchActivityTwoButton. (for ActivityOne.java only)
 
     repeate a-d for a2
 

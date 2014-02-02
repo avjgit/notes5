@@ -18,7 +18,7 @@ public class ActivityOne extends Activity {
 
 	// String for LogCat documentation
 	private final static String TAG = "Lab-ActivityOne";
-	
+
 	// Lifecycle counters
 
 	// TODO_done:
@@ -28,17 +28,15 @@ public class ActivityOne extends Activity {
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called
 
-
-
 	// TODO_done: Create variables for each of the TextViews, called
-        // mTvCreate, etc. 
+	// mTvCreate, etc.
 	TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_one);
-		
+
 		// TODO_done: Assign the appropriate TextViews to the TextView variables
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
@@ -47,40 +45,36 @@ public class ActivityOne extends Activity {
 		mTvStart = (TextView) findViewById(R.id.start);
 		mTvResume = (TextView) findViewById(R.id.resume);
 
-
-
-
-
-		Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo); 
+		Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
 		launchActivityTwoButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO:
 				// Launch Activity Two
 				// Hint: use Context's startActivity() method
 
-				// Create an intent stating which Activity you would like to start
+				// Create an intent stating which Activity you would like to
+				// start
+				Intent intent = new Intent(getBaseContext(), ActivityTwo.class);
 
-				
 				// Launch the Activity using the intent
+				startActivity(intent);
 
-			
 			}
 		});
-		
+
 		// Check for previously saved state
 		if (savedInstanceState != null) {
 
 			// TODO:
 			// Restore value of counters from saved state
 			// Only need 4 lines of code, one for every count variable
-			
-		
+
 		}
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onCreate() method");
+		Log.i(TAG, "Entered the onCreate() method");
 
 		// TODO_done:
 		// Update the appropriate count variable
@@ -97,7 +91,7 @@ public class ActivityOne extends Activity {
 		super.onStart();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onStart() method");
+		Log.i(TAG, "Entered the onStart() method");
 
 		// TODO_done:
 		// Update the appropriate count variable
@@ -111,14 +105,13 @@ public class ActivityOne extends Activity {
 		super.onResume();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onResume() method");
+		Log.i(TAG, "Entered the onResume() method");
 
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
 		mResume++;
 		displayCounts();
-
 
 	}
 
@@ -127,7 +120,7 @@ public class ActivityOne extends Activity {
 		super.onPause();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onPause() method");
+		Log.i(TAG, "Entered the onPause() method");
 	}
 
 	@Override
@@ -135,7 +128,7 @@ public class ActivityOne extends Activity {
 		super.onStop();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onStop() method");
+		Log.i(TAG, "Entered the onStop() method");
 	}
 
 	@Override
@@ -143,15 +136,13 @@ public class ActivityOne extends Activity {
 		super.onRestart();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onRestart() method");
+		Log.i(TAG, "Entered the onRestart() method");
 
 		// TODO_done:
 		// Update the appropriate count variable
 		// Update the user interface
 		mRestart++;
 		displayCounts();
-
-
 
 	}
 
@@ -160,7 +151,7 @@ public class ActivityOne extends Activity {
 		super.onDestroy();
 
 		// TODO_done: Emit LogCat message
-	    Log.i(TAG, "Entered the onDestroy() method");
+		Log.i(TAG, "Entered the onDestroy() method");
 
 	}
 
@@ -170,13 +161,8 @@ public class ActivityOne extends Activity {
 		// Save state information with a collection of key-value pairs
 		// 4 lines of code, one for every count variable
 
-
-
-
-
-
 	}
-	
+
 	// Updates the displayed counters
 	public void displayCounts() {
 
@@ -184,6 +170,6 @@ public class ActivityOne extends Activity {
 		mTvStart.setText("onStart() calls: " + mStart);
 		mTvResume.setText("onResume() calls: " + mResume);
 		mTvRestart.setText("onRestart() calls: " + mRestart);
-	
+
 	}
 }
