@@ -32,3 +32,58 @@ extras:     key-values
 flags:      how handle the intent
             FLAG_ACTIVITY_NO_HISTORY
             FLAT_DEBUG_LOG_RESOLUTION
+
+3-2 Intent class
+================
+how to find target activity?
+    - explicitly set
+    - implicitly determined
+
+EXPLICIT:
+Intent helloAndroidIntent = new Intent(CONTEXT, CLASS);
+
+Intent helloAndroidIntent = new Intent(
+        LoginScreen.this,
+        HelloAndroid.class
+);
+
+loginButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                if (checkPassword(uname.getText(), passwd.getText())) {
+                    Intent helloAndroidIntent = new Intent(
+                            LoginScreen.this,
+                            HelloAndroid.class
+                    );
+                    startActivity(helloAndroidIntent);
+                } else {
+                    uname.setText("");
+                    passwd.setText("");
+                }
+            }
+        }
+
+IMPLICIT: (aka Intent resolution):
+    1) from one side, intent says which operation it wants
+    2) from other side, activities have told, which operations they can handle
+        (in manifest) - IntentFilter
+
+eg:
+<activity>
+    <intent-filter>
+        <action android:name="android.intent.action.DIAL"
+
+        <data
+            android:mimetype="string"
+            android:scheme="geo" //for google maps
+            </activity>
+
+eg, for map app:
+<intent-filter>
+    <action android:name="android.intent.action.VIEW"/>
+    // responds to browser links
+    <category android:name="android.intent.category.DEFAULT"/>
+    <category android:name="android.intent.category.BROWSABLE"/>
+    <data android:scheme="geo"/>
+</intent-filter>
+
+priorities: between -1000 and 1000
