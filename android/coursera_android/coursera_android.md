@@ -121,3 +121,26 @@ service permissions
     context.starteservice()
 broadcast receivers permissions
 contentprovider permissions
+
+3-3 Fragments 1
+================
+a behavior/ portion of UI within an activity
+activity can have many fragments
+fragment can be reused in misc activities
+
+resumed     - visible
+paused      - another activity in foreground
+stopped
+
+onattach()          - when fragment is being attached to activity
+oncreate()          - no UI set up
+onCreateView()      - creates view
+onActivityCreated() -
+
+onStart()           - hosting activity about to become visible
+onResume()          - ... and ready to user interaction
+onPause()           - smth in foreground
+onStop()            - not visible
+onDestroyView()     - detached from actitivy; clean up resources
+onDestroy()         - fragment no longer in user; release fragment resources
+onDetach()          - no longer attached; null out refs to host activity
