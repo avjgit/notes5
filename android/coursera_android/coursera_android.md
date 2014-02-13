@@ -144,3 +144,62 @@ onStop()            - not visible
 onDestroyView()     - detached from actitivy; clean up resources
 onDestroy()         - fragment no longer in user; release fragment resources
 onDetach()          - no longer attached; null out refs to host activity
+
+3-4 Fragments 2
+================
+add to activity -
+    statically, in activity layout
+    or via fragment manager
+
+    oncreateview() returns UI for host activity
+
+STATICALLY
+which class implements this fragment:
+    class="course.examples.Fragments.StaticLayout.TitlesFragment" />
+
+    <fragment
+        android:id="@+id/titles"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="course.examples.Fragments.StaticLayout.TitlesFragment" />
+
+    <fragment
+        android:id="@+id/details"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        class="course.examples.Fragments.StaticLayout.QuotesFragment" />
+
+@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+        Bundle savedInstanceState) {
+    return inflater.inflate(R.layout.quote_fragment, container, false);
+}
+
+DYNAMICALLY
+1 ref to fragmentmngr
+2 fragmenttransaction
+3 add fragment
+4 commit
+
+check:
+framelayouts
+
+    @Override
+    public void onListSelection(int index) {
+        if (!mQuoteFragment.isAdded()) {
+            FragmentTransaction fragmentTransaction = mFragmentManager
+                    .beginTransaction();
+            fragmentTransaction.add(R.id.quote_fragment_container,
+                    mQuoteFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+            mFragmentManager.executePendingTransactions();
+        }
+        if (mQuoteFragment.getShownIndex() != index) {
+            mQuoteFragment.showIndex(index);
+        }
+    }
+
+setretaininstance
