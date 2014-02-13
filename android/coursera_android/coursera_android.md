@@ -87,3 +87,37 @@ eg, for map app:
 </intent-filter>
 
 priorities: between -1000 and 1000
+
+3-3 Permissions
+================
+android built-in and application custome
+    contacts, sms, camera
+
+in manifest
+
+<uses-permission android:name="android.permission.CAMERA">
+<uses-permission android:name="android.permission.internet>
+<uses-permission android:name="android.permission.precise location>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="course.examples.MapLocationFromContacts"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+
+example with BOOM application:
+
+    <permission
+        android:name="course.examples.permissionexample.BOOM_PERM"
+        android:description="@string/boom_perm_string"
+        android:label="@string/boom_permission_label_string">
+    </permission>
+
+activity permissions
+    startactivity()
+service permissions
+    context.starteservice()
+broadcast receivers permissions
+contentprovider permissions
