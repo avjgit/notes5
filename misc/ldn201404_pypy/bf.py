@@ -21,7 +21,38 @@ def mainloop(program, bracket_map):
             tape=tape, position=position)
 
         # Brainfuck specific code goes here
-        return
+        code = program[pc]
+
+        if code == ">":
+            tape.advance()
+
+        elif code == "<":
+            tape.devance()
+
+        elif code == "+":
+            tape.inc()
+
+        elif code == "-":
+            tape.dec()
+        
+        elif code == ".":
+            # print
+            sys.stdout.write(chr(tape.get()))
+        
+        elif code == ",":
+            # read from stdin
+            tape.set(ord(sys.stdin.read(1)))
+
+        elif code == "[" and tape.get() == 0:
+            # Skip forward to the matching ]
+            pc = bracket_map[pc]
+            
+        elif code == "]" and tape.get() != 0:
+            # Skip back to the matching [
+            pc = bracket_map[pc]
+
+        pc += 1
+        return pc
 
 
 def parse(program):
